@@ -116,6 +116,23 @@ This example demonstrates how the ALU performs a simple 2's complement addition 
 The ALU correctly performs the addition `6 + (-7) = -1`, sets the `ng` flag because the result is negative, and clears the `zr` flag since the output is not zero.
 
 ![Screenshot 2025-04-14 133156](https://github.com/user-attachments/assets/2617cd7e-37c7-4348-ad55-386714d91a9d)
+## 🧪 ALU Operation Example: Bitwise AND with Inverted Output (f = 0, no = 1)
+
+| Signal | Value  | Description                                  |
+|--------|--------|----------------------------------------------|
+| `x`    | `0110` | 6 in decimal                                 |
+| `y`    | `1001` | -7 in decimal (2's complement)               |
+| `zx`   | `0`    | Don't zero `x`                               |
+| `nx`   | `0`    | Don't negate `x`                             |
+| `zy`   | `0`    | Don't zero `y`                               |
+| `ny`   | `0`    | Don't negate `y`                             |
+| `f`    | `0`    | Perform bitwise AND                          |
+| `no`   | `1`    | Invert the final output (bitwise NOT)        |
+| `x & y`| `0000` | Bitwise AND: `0110 & 1001 = 0000`            |
+| `out`  | `1111` | Inverted output: `~0000 = 1111`              |
+| `zr`   | `0`    | Output is not zero                           |
+| `ng`   | `1`    | Output is negative (MSB = 1)                 |
+
 ![Screenshot 2025-04-14 133347](https://github.com/user-attachments/assets/a8bcaf4e-9bee-4a8a-b140-06b8a4bfb49a)
 ![Screenshot 2025-04-14 133406](https://github.com/user-attachments/assets/f79d3173-161e-47c2-8e96-555932cf91c2)
 ![Screenshot 2025-04-14 133451](https://github.com/user-attachments/assets/b87e05e9-cca1-4637-aeb3-69ccaf7314d7)
