@@ -66,12 +66,58 @@ Since this is 16-bit 2's complement, check if MSB (out[15]) is 1.
 
 ![image](https://github.com/user-attachments/assets/011976d5-04fd-4ec7-bfb5-b8a86c62093d)
 
-![Screenshot 2025-04-14 131438](https://github.com/user-attachments/assets/1206534c-e540-4e19-85e7-6860dfc4d7f0)
-![Screenshot 2025-04-14 133507](https://github.com/user-attachments/assets/9dd48fe3-6c3b-4445-8cfc-0d0be06f82bb)
-![Screenshot 2025-04-14 131209](https://github.com/user-attachments/assets/62091788-5632-442e-bc3a-a38d0b6b036d)
-![Screenshot 2025-04-14 131224](https://github.com/user-attachments/assets/f4661b1f-a96a-4a7e-9598-ae4ab3c3bb03)
+## 🧪 ALU Operation Example: Addition
+
+This example demonstrates how the ALU performs a simple 2's complement addition using control signals.
+
+---
+
+### 🔧 Inputs:
+| Signal | Value | Description                   |
+|--------|-------|-------------------------------|
+| `x`    | `0110` | 6 in decimal                  |
+| `y`    | `1001` | -7 in decimal (2's complement)|
+| `zx`   | `0`    | Don't zero `x`                |
+| `nx`   | `0`    | Don't negate `x`              |
+| `zy`   | `0`    | Don't zero `y`                |
+| `ny`   | `0`    | Don't negate `y`              |
+| `f`    | `1`    | Perform addition              |
+| `no`   | `0`    | Don't negate the output       |
+
+---
+
+### ⚙️ Execution Steps:
+
+1. **Preprocessing:**
+   - `x` and `y` remain unchanged since `zx`, `nx`, `zy`, and `ny` are all `0`.
+
+2. **Function Selection:**
+   - Since `f = 1`, the ALU adds the inputs: `0110 (6)` + `1001 (-7)`
+
+3. **Output Calculation:**
+   - Result = `1111` → This is `-1` in 2’s complement 4-bit representation
+
+4. **Output Inversion:**
+   - `no = 0`, so no inversion is applied to the result
+
+---
+
+### 🧾 Final Output:
+
+| Signal | Value | Meaning                   |
+|--------|-------|---------------------------|
+| `out`  | `1111` | -1 in 2’s complement      |
+| `zr`   | `0`    | Output is not zero        |
+| `ng`   | `1`    | Output is negative (MSB = 1) |
+
+---
+
+### 📌 Summary:
+The ALU correctly performs the addition `6 + (-7) = -1`, sets the `ng` flag because the result is negative, and clears the `zr` flag since the output is not zero.
 
 ![Screenshot 2025-04-14 133156](https://github.com/user-attachments/assets/2617cd7e-37c7-4348-ad55-386714d91a9d)
 ![Screenshot 2025-04-14 133347](https://github.com/user-attachments/assets/a8bcaf4e-9bee-4a8a-b140-06b8a4bfb49a)
 ![Screenshot 2025-04-14 133406](https://github.com/user-attachments/assets/f79d3173-161e-47c2-8e96-555932cf91c2)
 ![Screenshot 2025-04-14 133451](https://github.com/user-attachments/assets/b87e05e9-cca1-4637-aeb3-69ccaf7314d7)
+![Screenshot 2025-04-14 131438](https://github.com/user-attachments/assets/1206534c-e540-4e19-85e7-6860dfc4d7f0)
+![Screenshot 2025-04-14 133507](https://github.com/user-attachments/assets/9dd48fe3-6c3b-4445-8cfc-0d0be06f82bb)
