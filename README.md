@@ -1,0 +1,10 @@
+# 16bit-ALU-with-6-functions--Building-a-modern-computer-from-nand-to-tetris-
+![Screenshot 2025-04-14 133507](https://github.com/user-attachments/assets/9dd48fe3-6c3b-4445-8cfc-0d0be06f82bb)
+![Screenshot 2025-04-14 131209](https://github.com/user-attachments/assets/62091788-5632-442e-bc3a-a38d0b6b036d)
+![Screenshot 2025-04-14 131224](https://github.com/user-attachments/assets/f4661b1f-a96a-4a7e-9598-ae4ab3c3bb03)
+![Screenshot 2025-04-14 131256](https://github.com/user-attachments/assets/4a0a1427-dfcf-49d0-81af-89d65489d73c)
+![Screenshot 2025-04-14 131438](https://github.com/user-attachments/assets/1206534c-e540-4e19-85e7-6860dfc4d7f0)
+![Screenshot 2025-04-14 133156](https://github.com/user-attachments/assets/2617cd7e-37c7-4348-ad55-386714d91a9d)
+![Screenshot 2025-04-14 133347](https://github.com/user-attachments/assets/a8bcaf4e-9bee-4a8a-b140-06b8a4bfb49a)
+![Screenshot 2025-04-14 133406](https://github.com/user-attachments/assets/f79d3173-161e-47c2-8e96-555932cf91c2)
+![Screenshot 2025-04-14 133451](https://github.com/user-attachments/assets/b87e05e9-cca1-4637-aeb3-69ccaf7314d7)
