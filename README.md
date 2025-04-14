@@ -133,8 +133,50 @@ The ALU correctly performs the addition `6 + (-7) = -1`, sets the `ng` flag beca
 | `zr`   | `0`    | Output is not zero                           |
 | `ng`   | `1`    | Output is negative (MSB = 1)                 |
 
-![Screenshot 2025-04-14 133347](https://github.com/user-attachments/assets/a8bcaf4e-9bee-4a8a-b140-06b8a4bfb49a)
 ![Screenshot 2025-04-14 133406](https://github.com/user-attachments/assets/f79d3173-161e-47c2-8e96-555932cf91c2)
+
+## 🧪 ALU Operation Example: Bitwise AND (f = 0, no = 0)
+
+| Signal | Value  | Description                                  |
+|--------|--------|----------------------------------------------|
+| `x`    | `0110` | 6 in decimal                                 |
+| `y`    | `1001` | -7 in decimal (2's complement)               |
+| `zx`   | `0`    | Don't zero `x`                               |
+| `nx`   | `0`    | Don't negate `x`                             |
+| `zy`   | `0`    | Don't zero `y`                               |
+| `ny`   | `0`    | Don't negate `y`                             |
+| `f`    | `0`    | Perform bitwise AND                          |
+| `no`   | `0`    | Do not invert the output                     |
+| `x & y`| `0000` | Bitwise AND: `0110 & 1001 = 0000`            |
+| `out`  | `0000` | Final output after no inversion              |
+| `zr`   | `1`    | Output is zero                               |
+| `ng`   | `0`    | Output is not negative (MSB = 0)             |
+
+
+![Screenshot 2025-04-14 133347](https://github.com/user-attachments/assets/a8bcaf4e-9bee-4a8a-b140-06b8a4bfb49a)
+
+## 🧪 ALU Operation Example: Zero `x` Input (zx = 1, rest = 0)
+
+| Signal | Value  | Description                                  |
+|--------|--------|----------------------------------------------|
+| `x`    | `0110` | Original value: 6 in decimal                 |
+| `y`    | `1001` | -7 in decimal (2's complement)               |
+| `zx`   | `1`    | Zero the `x` input                           |
+| `nx`   | `0`    | Don't negate `x`                             |
+| `zy`   | `0`    | Don't zero `y`                               |
+| `ny`   | `0`    | Don't negate `y`                             |
+| `f`    | `0`    | Perform bitwise AND                          |
+| `no`   | `0`    | Do not invert the output                     |
+| `x'`   | `0000` | Zeroed `x` due to `zx = 1`                   |
+| `x' & y`| `0000`| `0000 & 1001 = 0000`                         |
+| `out`  | `0000` | Final output                                 |
+| `zr`   | `1`    | Output is zero                               |
+| `ng`   | `0`    | Output is not negative (MSB = 0)             |
+
+
 ![Screenshot 2025-04-14 133451](https://github.com/user-attachments/assets/b87e05e9-cca1-4637-aeb3-69ccaf7314d7)
+## 🖼️ Synthesized Design
+
+Here’s a screenshot of the synthesized ALU design:
 ![Screenshot 2025-04-14 131438](https://github.com/user-attachments/assets/1206534c-e540-4e19-85e7-6860dfc4d7f0)
-![Screenshot 2025-04-14 133507](https://github.com/user-attachments/assets/9dd48fe3-6c3b-4445-8cfc-0d0be06f82bb)
+
